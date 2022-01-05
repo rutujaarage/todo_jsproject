@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#header{
+    display: flex;
+    font-size: 50px;
+    margin: 5% 0 0 10%;
+}
+#Addbutton{
+    z-index: 1;
+    position: absolute;
+    left: 80%;
+    cursor: pointer;
+}
+.coloris{
+    color: red;
+}
+#modaldiv{
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+#modalbox{
+    border-radius: 7px;
+    width: 30vw;
+    height: 30vh;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    animation: modalPop 0.2s ease-in 0s 1;
+}
+.main-text{
+    color: #04293A;
+    font-size: 50px;
+}
+.red-button{
+    border-radius: 250px;
+    margin-top: 5%;
+    color: white;
+    background-color: red;
+    font-size: 30px;
+    width: 25%;
+    height: 20%;
+    cursor: pointer;
+}
+button{
+    border: none;
+}
+#modal-close-button{
+    margin-left: 10%;
+}
+.modal-content{
+    margin-top: 3%;
+}
+.input-box{
+    width: 80%;
+    height: 25%;
+    text-align: center;
+    font-size: 30px;
+}
+#outer_container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 10%;
+    width: 90%;
+}
+.card{
+    list-style: none;
+    display: none;
+    position: relative;
+    min-height: 350px;
+    min-width: 15%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5% 0 0 10%;
+    padding: 10px 0 0 0;
+    background: #EEEEEE;
+    box-shadow: 0px 0px 20px #00ADB5;
+    animation: cardAnimate 0.2s ease-in 0s 1;
+}
+.card-head{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #393E46;
+    cursor: pointer;
+}
+.list-element{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.buttons-in-card{
+    display: flex;
+    font-size: 30px;
+}
+.delete-button-in-card{
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #393E46;
+    background-color: #EEEEEE;
+}
+.add-button-in-card{
+    position: absolute;
+    bottom: 10px;
+    font-size: 25px;
+    margin-left: 15%;
+    right: 10px;
+    cursor: pointer;
+    color:#393E46;
+    background-color: #EEEEEE;
+}
+.innerlist-button{
+    cursor: pointer;
+}
+#modalDiv_card{
+    display: none;
+    position: fixed;
+    padding: 20% 0 0 30%;
+    text-align: center;
+    top: -10%;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+#modalBox_card{
+    border-radius: 7px;
+    width: 30vw;
+    height: 30vh;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    animation: modalPop 0.2s ease-in 0s 1;
+}
+.this-list-element{
+    font-size: 20px;
+    font-weight: 700;
+    color: #393E46;
+    animation: cardTextAnimate 0.2s ease-in 0s 1;
+}
+#check-done{
+    color: black;
+    background-color: grey;
+    display: none;
+}
+.mark-as-done-class{
+    background-color: #393E46;
+    color: #EEEEEE;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px 10px 10px 10px;
+}
+#back_button{
+    margin-left: 10%;
+   font-size: 40px;
+   display: none;
+}
+#back-icon{
+    z-index: 20;
+    font-size: 40px;   
+    color: #00ADB5;
+    cursor: pointer;
+}
+#dynamic-card{
+    justify-content: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: #00ADB5;
+    display: none;
+}
+#empty-list{
+    position: relative;
+    top: 10vh;
+    margin-left: 30vw;
+    color: white;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+
+@keyframes modalPop {
+    0% { transform: scale(0); };
+    50% { transform: scale(0.5); };
+    100% { transform: scale(1); };
+}
+
+@keyframes cardAnimate {
+    0% { transform: scaleX(0); };
+    100% { transform: scaleX(1) };
+}
+
+@keyframes cardTextAnimate {
+    0% { transform: scaleY(0); };
+    100% { transform: scaleY(1) };
+}
